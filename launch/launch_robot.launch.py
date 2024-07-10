@@ -24,7 +24,7 @@ def generate_launch_description():
     teleop_joy = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory(package_name),'launch','joystick.launch.py'
-        )]), launch_arguments={'use_sim_time': 'true'}.items()
+        )]), launch_arguments={'use_sim_time': 'false'}.items()
     )
 
     robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
