@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <!-- Constants -->
+    <xacro:property name='chss_len' value='0.8'/>
+    <xacro:property name='chss_wid' value='0.8'/>
+    <xacro:property name='chss_h' value='0.325'/>
+    <xacro:property name='chss_mass' value='5'/>
+    <xacro:property name='wheel_to_origin' value='0.27'/>
+    <xacro:property name='wheel_rad' value='0.1'/>
+    <xacro:property name='wheel_wid' value='0.02'/>
+    <xacro:property name='wheel_mass' value='0.25'/>
+    <xacro:property name='caster_rad' value='0.1'/>
+    <xacro:property name='caster_mass' value='0.2'/>
+    <xacro:property name='front_caster_to_origin' value='0.25'/>
+    <xacro:property name='back_caster_to_x' value='0.25'/>
+    <xacro:property name='back_caster_to_y' value='0.25'/>
+    <xacro:property name='lidar_rad' value='0.035'/>
+    <xacro:property name='lidar_h' value='0.054'/>
+    <xacro:property name='lidar_h_to_cam' value='0.044'/>
+
+    <!-- Creating colors -->
+    <material name="white">
+        <color rgba="1 1 1 1"/>
+    </material>
+    <material name="orange">
+        <color rgba="1 0.3 0.1 1"/>
+    </material>
+    <material name="blue">
+        <color rgba="0.2 0.2 1 1"/>
+    </material>
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+    <material name="red">
+        <color rgba="1 0 0 1"/>
+    </material>
+</robot>
