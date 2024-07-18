@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/asak/dev_ws2/install/serial/include/**",
+        "/home/asak/dev_ws2/install/rplidar_ros/include/**",
+        "/home/asak/dev_ws2/install/pose_int/include/**",
+        "/opt/ros/humble/include/**",
+        "/home/asak/dev_ws2/src/diffdrive_arduino/include/**",
+        "/home/asak/dev_ws2/src/pose_int/include/**",
+        "/home/asak/dev_ws2/src/rplidar_ros2/include/**",
+        "/home/asak/dev_ws2/src/serial/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
