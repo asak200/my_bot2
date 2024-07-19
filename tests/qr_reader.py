@@ -9,9 +9,12 @@ import time
 #cap = cv2.VideoCapture(0)
 font = cv2.FONT_HERSHEY_PLAIN
  
-url='http://192.168.174.109/'
+url='http://192.168.1.22/'
 cv2.namedWindow("live transmission", cv2.WINDOW_AUTOSIZE)
- 
+# 192.168.1.22 -> home
+# 192.168.174.109 -> my phone
+
+
 prev=""
 pres=""
 while True:
@@ -20,7 +23,7 @@ while True:
     imgnp=np.array(bytearray(img_resp.read()),dtype=np.uint8)
     frame=cv2.imdecode(imgnp,-1)
     #_, frame = cap.read()
- 
+
     decodedObjects = pyzbar.decode(frame)
     for obj in decodedObjects:
         pres=obj.data
@@ -32,7 +35,7 @@ while True:
             prev=pres
         cv2.putText(frame, str(obj.data), (50, 50), font, 2,
                     (255, 255, 0), 3)
- 
+
     cv2.imshow("live transmission", frame)
  
     key = cv2.waitKey(1)
