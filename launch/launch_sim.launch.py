@@ -41,6 +41,14 @@ def generate_launch_description():
         )]), launch_arguments={'use_sim_time': 'true'}.items()
     )
 
+    twist_mux_params = os.path.join(get_package_share_directory(package_name), 'config', 'twist_mux.yaml')
+    twist_mux = Node(
+        package='twist_mux',
+        executable='twist_mux',
+        parameters=[twist_mux_params, {'use_sim_time': True}],
+        remappings=[('/cmd_vel_out', '/diff_cont/cmd_vel_unstamped')]
+    )
+
     diff_drive_spawner = Node(
         package='controller_manager',
         executable='spawner',
@@ -58,6 +66,7 @@ def generate_launch_description():
         gazebo,
         spawn_entity,
         teleop_joy,
+        twist_mux,
         diff_drive_spawner,
         joint_broad_spawner,
     ])

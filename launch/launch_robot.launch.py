@@ -27,46 +27,26 @@ def generate_launch_description():
         )]), launch_arguments={'use_sim_time': 'false'}.items()
     )
 
-    robot_description = Command(['ros2 param get --hide-type /robot_state_publisher robot_description'])
-    controller_params_file = os.path.join(get_package_share_directory(package_name),'config','my_controllers_real.yaml')
-
-    controller_manager = Node(
-        package='controller_manager',
-        executable='ros2_control_node',
-        parameters=[{'robot_description': robot_description},
-                    controller_params_file]
+    ser_com = Node(
+        package='serial_com',
+        executable='serial_com',
     )
     
-    delayed_controller_manager = TimerAction(period=3.0, actions=[controller_manager])
-
-    diff_drive_spawner = Node(
-        package='controller_manager',
-        executable='spawner',
-        arguments=['diff_cont']
-    )
-    delayed_diff_drive_spawner = RegisterEventHandler(
-        event_handler= OnProcessStart(
-            target_action=controller_manager,
-            on_start=[diff_drive_spawner],
-        )
+    joint_broad = Node(
+        package='serial_com',
+        executable='joint_broad',
     )
     
-    joint_broad_spawner = Node(
-        package='controller_manager',
-        executable='spawner',
-        arguments=['joint_broad']
-    )
-    delayed_joint_broad_spawner = RegisterEventHandler(
-        event_handler= OnProcessStart(
-            target_action=controller_manager,
-            on_start=[joint_broad_spawner],
-        )
+    diff_cont = Node(
+        package='serial_com',
+        executable='diff_cont',
+        output='screen',
     )
 
     return LaunchDescription([
         rsp,
-        teleop_joy,
-        delayed_controller_manager,
-        delayed_diff_drive_spawner,
-        delayed_joint_broad_spawner,
+        # teleop_joy,
+        ser_com,
+        joint_broad,
+        diff_cont,
     ])
