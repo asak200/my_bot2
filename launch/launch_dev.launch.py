@@ -15,38 +15,19 @@ def generate_launch_description():
     # Include the robot_state_publisher launch file, provided by our own package. Force sim time to be enabled
     package_name='my_bot2'
 
-    rsp = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource([os.path.join(
-            get_package_share_directory(package_name),'launch','rsp.launch.py'
-        )]), launch_arguments={'use_sim_time': 'false', 'use_ros2_control': 'true'}.items()
-    )
-
     teleop_joy = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(
             get_package_share_directory(package_name),'launch','joystick.launch.py'
         )]), launch_arguments={'use_sim_time': 'false'}.items()
     )
 
-    ser_com = Node(
-        package='serial_com',
-        executable='serial_com',
-    )
-    
-    joint_broad = Node(
-        package='serial_com',
-        executable='joint_broad',
-    )
-    
-    diff_cont = Node(
-        package='serial_com',
-        executable='diff_cont',
+    rviz = Node(
+        package='rviz2',
+        node_executable='rviz2',
         output='screen',
     )
 
     return LaunchDescription([
-        rsp,
-        # teleop_joy,
-        ser_com,
-        # joint_broad,
-        # diff_cont,
+        teleop_joy,
+        rviz,
     ])
