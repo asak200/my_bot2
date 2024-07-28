@@ -27,7 +27,20 @@ def generate_launch_description():
         output='screen',
     )
 
+    joint_broad = Node(
+        package='serial_com',
+        executable='joint_broad',
+    )
+    
+    diff_cont = Node(
+        package='serial_com',
+        executable='diff_cont',
+        output='screen',
+    )
+
     return LaunchDescription([
         teleop_joy,
         rviz,
+        joint_broad,
+        diff_cont,
     ])

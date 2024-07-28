@@ -25,21 +25,8 @@ def generate_launch_description():
         package='serial_com',
         executable='serial_com',
     )
-    
-    joint_broad = Node(
-        package='serial_com',
-        executable='joint_broad',
-    )
-    
-    diff_cont = Node(
-        package='serial_com',
-        executable='diff_cont',
-        output='screen',
-    )
 
     return LaunchDescription([
         rsp,
         ser_com,
-        joint_broad,
-        diff_cont,
     ])
