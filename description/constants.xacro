@@ -31,8 +31,8 @@
     <xacro:property name='caster_rad' value='0.035'/>
     <xacro:property name='caster_mass' value='0.02'/>
     <xacro:property name='front_caster_to_origin' value='0.1'/>
-    <xacro:property name='back_caster_to_x' value='0.8'/>
-    <xacro:property name='back_caster_to_y' value='0.6'/>
+    <xacro:property name='back_caster_to_x' value='0.08'/>
+    <xacro:property name='back_caster_to_y' value='0.06'/>
 
     <!-- lidar -->
     <xacro:property name='lidar_rad' value='0.035'/>
