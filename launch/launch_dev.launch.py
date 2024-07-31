@@ -41,6 +41,6 @@ def generate_launch_description():
     return LaunchDescription([
         teleop_joy,
         rviz,
-        joint_broad,
-        diff_cont,
+        # joint_broad,
+        # diff_cont,
     ])
