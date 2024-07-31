@@ -8,8 +8,8 @@ import time
  
 #cap = cv2.VideoCapture(0)
 font = cv2.FONT_HERSHEY_PLAIN
- 
-url='http://192.168.174.109/'
+
+url='http://192.168.145.109/'
 cv2.namedWindow("live transmission", cv2.WINDOW_AUTOSIZE)
 # 192.168.1.22 -> home
 # 192.168.174.109 -> my phone
@@ -41,5 +41,5 @@ while True:
     key = cv2.waitKey(1)
     if key == 27:
         break
- 
+
 cv2.destroyAllWindows()
