@@ -13,7 +13,7 @@
     <xacro:property name='chss_mass' value='2'/> -->
 
     <!-- wheel -->
-    <xacro:property name='wheel_to_origin' value='0.27'/>
+    <xacro:property name='wheel_to_origin' value='0.275'/>
     <xacro:property name='wheel_rad' value='0.1'/>
     <xacro:property name='wheel_wid' value='0.02'/>
     <xacro:property name='wheel_mass' value='0.25'/>
