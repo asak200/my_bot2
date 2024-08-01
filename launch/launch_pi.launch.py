@@ -41,5 +41,5 @@ def generate_launch_description():
         rsp,
         ser_com,
         joint_broad,
-        diff_cont,
+        # diff_cont,
     ])

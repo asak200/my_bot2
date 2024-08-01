@@ -42,5 +42,5 @@ def generate_launch_description():
         teleop_joy,
         rviz,
         # joint_broad,
-        # diff_cont,
+        diff_cont,
     ])
