@@ -32,5 +32,5 @@ def generate_launch_description():
     return LaunchDescription([
         slam,
         nav2,
-        goal_sender,
+        # goal_sender,
     ])  

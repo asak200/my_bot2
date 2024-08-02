@@ -4,7 +4,7 @@
     <!-- Constants -->
 
     <!-- REAL ROBOT -->
-    <!-- <xacro:property name='chss_len' value='0.8'/>
+    <xacro:property name='chss_len' value='0.8'/>
     <xacro:property name='chss_wid' value='0.8'/>
     <xacro:property name='chss_h' value='0.325'/>
     <xacro:property name='chss_mass' value='5'/>
@@ -18,11 +18,11 @@
     <xacro:property name='caster_mass' value='0.2'/>
     <xacro:property name='front_caster_to_origin' value='0.25'/>
     <xacro:property name='back_caster_to_x' value='0.25'/>
-    <xacro:property name='back_caster_to_y' value='0.25'/> -->
+    <xacro:property name='back_caster_to_y' value='0.25'/>
 
 
     <!-- MEJD'S ROBOT -->
-    <xacro:property name='chss_len' value='0.26'/>
+    <!-- <xacro:property name='chss_len' value='0.26'/>
     <xacro:property name='chss_wid' value='0.16'/>
     <xacro:property name='chss_h' value='0.08'/>
     <xacro:property name='chss_mass' value='2'/>
@@ -36,7 +36,7 @@
     <xacro:property name='caster_mass' value='0.02'/>
     <xacro:property name='front_caster_to_origin' value='0.1'/>
     <xacro:property name='back_caster_to_x' value='0.08'/>
-    <xacro:property name='back_caster_to_y' value='0.06'/>
+    <xacro:property name='back_caster_to_y' value='0.06'/> -->
 
     <!-- lidar -->
     <xacro:property name='lidar_rad' value='0.035'/>
