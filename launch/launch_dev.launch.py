@@ -50,6 +50,6 @@ def generate_launch_description():
         teleop_joy,
         twist_mux,
         rviz,
-        # joint_broad,
+        joint_broad,
         diff_cont,
     ])

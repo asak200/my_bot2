@@ -25,6 +25,6 @@ teleop_node:
     enable_button: 0
     enable_turbo_button: 1
 
-    deadzone: 0.1
+    # deadzone: 0.1
 
     require_enable_button: true
