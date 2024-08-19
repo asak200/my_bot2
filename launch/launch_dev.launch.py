@@ -49,7 +49,7 @@ def generate_launch_description():
     return LaunchDescription([
         teleop_joy,
         twist_mux,
-        rviz,
+        # rviz,
         # joint_broad,
         diff_cont,
     ])
