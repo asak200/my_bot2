@@ -23,12 +23,12 @@ def generate_launch_description():
             }],
         ),
 
-        Node(
-            package='laser_filters',
-            executable='scan_to_scan_filter_chain',
-            name='scan_filter',
-            output='screen',
-            parameters=[{'filter_chain': 'scan_filter_chain'},
-                        os.path.join(pkg_path,'description','laser_limit.yaml')]
-        ),
+        # Node(
+        #     package='laser_filters',
+        #     executable='scan_to_scan_filter_chain',
+        #     name='scan_filter',
+        #     output='screen',
+        #     parameters=[{'filter_chain': 'scan_filter_chain'},
+        #                 os.path.join(pkg_path,'description','laser_limit.yaml')]
+        # ),
     ])

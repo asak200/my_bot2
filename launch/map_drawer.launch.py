@@ -1,6 +1,6 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
-
+from launch.actions import TimerAction
 
 def generate_launch_description():
 
@@ -20,8 +20,16 @@ def generate_launch_description():
         executable='map_updater'
     )
 
+    qr_pose_pub = Node(
+        package='goal_sender',
+        executable='qr_pose_pub'
+    )
+
+    delayed_qr_pose_pub = TimerAction(period=3.0, actions=[qr_pose_pub])
+
     return LaunchDescription([
-        raw_map_saver,
         position_publisher,
+        raw_map_saver,
         map_updater,
+        delayed_qr_pose_pub,
     ])

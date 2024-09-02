@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
 
 
-import yaml
+import numpy as np
+import cv2
 
-with open('/home/asak/dev_ws2/src/goal_sender/my_services/gui_data.yaml', 'r') as file:
-    data = yaml.safe_load(file)
+a = [[100, 100], [200, 200]]
 
-if 'ch' in data:
-    print('yay')
+path = '/home/asak/dev_ws2/the_map.png'
+img = cv2.imread(path)
+
+cv2.line(img, a[0], a[1], (0,100,0), 2)
+
+
+# Display the image
+cv2.imshow('Line', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
