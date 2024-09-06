@@ -25,11 +25,11 @@ def generate_launch_description():
         executable='qr_pose_pub'
     )
 
-    delayed_qr_pose_pub = TimerAction(period=3.0, actions=[qr_pose_pub])
+    delayed_qr_pose_pub = TimerAction(period=5.0, actions=[qr_pose_pub])
 
     return LaunchDescription([
-        position_publisher,
+        # position_publisher,
         raw_map_saver,
         map_updater,
-        delayed_qr_pose_pub,
+        # delayed_qr_pose_pub,
     ])
